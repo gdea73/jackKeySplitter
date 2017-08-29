@@ -37,6 +37,10 @@ int Client::initialize(std::vector<size_t> ranges) {
 			std::cout << "Split boundaries must be passed in ascending order.\n";
 			return 1;
 		}
+		if (upperBound > 126) {
+			std::cout << "Upper boundaries may not exceed 126.\n";
+			return 1;
+		}
 		while (j <= upperBound) {
 			lookupTable[j] = i - 1;
 			j++;
