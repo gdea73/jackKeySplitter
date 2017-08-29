@@ -1,9 +1,18 @@
+/**
+	jackKeySplitter: a utility for the JACK audio framework which demultiplexes
+	a MIDI instrument into two or more independent output ports.
+
+	author: George Albertson
+	creation date: 8/28/2017
+	license: MIT
+*/
+
 #include <iostream>
 #include <unistd.h>
 #include "client.hpp"
 
 int main(int argc, char **argv) {
-	std::cout << "KeySplitter!\n";
+	std::cout << "Starting jackKeySplitter...\n";
 	std::vector<size_t> ranges = std::vector<size_t>();
 	ranges.push_back(0);
 	for (int i = 1; i < argc; i++) {
