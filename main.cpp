@@ -1,6 +1,6 @@
 #include <iostream>
 #include <unistd.h>
-#include "jack.hpp"
+#include "client.hpp"
 
 int main(int argc, char **argv) {
 	std::cout << "KeySplitter!\n";
@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
 		ranges.push_back(r);
 	}
 	// initialize JACK client with desired input ranges
-	Jack j;
+	Client j;
 	if (j.initialize(ranges)) {
 		std::cout << "Initialization of JACK client failed.\n";
 		exit(1);
